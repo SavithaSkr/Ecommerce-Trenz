@@ -27,11 +27,7 @@ const AddProduct = () => {
     let formData = new FormData();
     formData.append("product", image);
 
-<<<<<<< HEAD
     await fetch("https://e-commerce-trenz.onrender.com/upload", {
-=======
-    await fetch("http://localhost:4000/upload", {
->>>>>>> 6275a029bbbbd532d5eb9ce793805ca9206ddda2
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -46,11 +42,7 @@ const AddProduct = () => {
       product.image = responseData.image_url;
       console.log(product);
       //send product to addproduct api
-<<<<<<< HEAD
       await fetch("https://e-commerce-trenz.onrender.com/addproduct", {
-=======
-      await fetch("http://localhost:4000/addproduct", {
->>>>>>> 6275a029bbbbd532d5eb9ce793805ca9206ddda2
         method: "POST",
         headers: {
           Accept: "application/json",

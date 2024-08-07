@@ -6,11 +6,7 @@ const ListProduct = () => {
   const [allProducts, setAllProducts] = useState([]);
 
   const fetchInfo = async () => {
-<<<<<<< HEAD
     await fetch("https://e-commerce-trenz.onrender.com/allproducts")
-=======
-    await fetch("http://localhost:4000/allproducts")
->>>>>>> 6275a029bbbbd532d5eb9ce793805ca9206ddda2
       .then((res) => res.json())
       .then((data) => {
         setAllProducts(data);
@@ -21,11 +17,7 @@ const ListProduct = () => {
   }, []);
 
   const remove_product = async (id) => {
-<<<<<<< HEAD
     await fetch("https://e-commerce-trenz.onrender.com/removeproduct", {
-=======
-    await fetch("http://localhost:4000/removeproduct", {
->>>>>>> 6275a029bbbbd532d5eb9ce793805ca9206ddda2
       method: "POST",
       headers: {
         Accept: "application/json",
