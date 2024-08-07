@@ -1,0 +1,5 @@
+backend 
+npm run dev
+admin
+ npm run dev
+frontend npm start
