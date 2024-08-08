@@ -14,7 +14,7 @@ const LoginSignup = () => {
   const login = async () => {
     console.log("Login Function Executed", formData);
     let responseData;
-    await fetch("https://e-commerce-trenz.onrender.com/login", {
+    await fetch("http://localhost:4000/login", {
       method: "POST",
       headers: {
         Accept: "application/form-data",
@@ -34,7 +34,7 @@ const LoginSignup = () => {
   const signup = async () => {
     console.log("Signup Executed", formData);
     let responseData;
-    await fetch("https://e-commerce-trenz.onrender.com/signup", {
+    await fetch("http://localhost:4000/signup", {
       method: "POST",
       headers: {
         Accept: "application/form-data",

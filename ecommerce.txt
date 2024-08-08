@@ -3,3 +3,14 @@ npm run dev
 admin
  npm run dev
 frontend npm start
+
+
+******************************************
+
+addproduct.jsx
+listproduct.jsx
+newcolleciton.jsx
+popular.jsx
+liginsighnup.jsx
+shopcontext.jsx
+

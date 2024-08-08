@@ -15,12 +15,12 @@ const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
   //fetch allproduct data from dtabase and store in the all_prodcut variable
   useEffect(() => {
-    fetch("https://e-commerce-trenz.onrender.com/allproducts")
+    fetch("http://localhost:4000/allproducts")
       .then((response) => response.json())
       .then((data) => setAllProduct(data));
 
     if (localStorage.getItem("auth-token")) {
-      fetch("https://e-commerce-trenz.onrender.com/getcart", {
+      fetch("http://localhost:4000/getcart", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -39,7 +39,7 @@ const ShopContextProvider = (props) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     //if we are logged in check using auth-token the add to cart
     if (localStorage.getItem("auth-token")) {
-      fetch("https://e-commerce-trenz.onrender.com/addtocart", {
+      fetch("http://localhost:4000/addtocart", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -56,7 +56,7 @@ const ShopContextProvider = (props) => {
   const RemoveFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
     if (localStorage.getItem("auth-token")) {
-      fetch("https://e-commerce-trenz.onrender.com/removefromcart", {
+      fetch("http://localhost:4000/removefromcart", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
