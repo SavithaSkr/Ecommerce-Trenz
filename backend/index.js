@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import multer from "multer";
 import jwt from "jsonwebtoken";
-
+//this is used to access the backend directory in out express app
 import path from "path";
 import cors from "cors";
 
@@ -37,14 +37,15 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-//creating Upload endpoint for images
+//**creating Upload endpoint for images
 
+//this is used to provide the path of the folder that will mount in images
 app.use("/images", express.static("upload/images"));
 
 app.post("/upload", upload.single("product"), (req, res) => {
   res.json({
     success: 1,
-    image_url: `http://localhost:${port}/images/${req.file.filename}`,
+    image_url: `https://e-commerce-trenz.onrender.com:${port}/images/${req.file.filename}`,
   });
 });
 
@@ -60,7 +61,9 @@ const Product = mongoose.model("Product", {
   date: { type: Date, default: Date.now },
   available: { type: Boolean, default: true },
 });
-//Creating API to store the porduct in database
+
+//Creating API to store the product in database
+
 app.post("/addproduct", async (req, res) => {
   let products = await Product.find({});
   let id;

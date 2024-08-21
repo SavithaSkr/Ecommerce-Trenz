@@ -36,8 +36,9 @@ const Navbar = () => {
           }}
         >
           <Link style={{ textDecoration: "none" }} to="/">
-            Shop
-          </Link>
+            {" "}
+            Shop{" "}
+          </Link>{" "}
           {menu === "shop" ? <hr /> : <></>}
         </li>
         <li

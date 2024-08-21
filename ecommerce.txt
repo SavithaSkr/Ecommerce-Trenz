@@ -4,6 +4,21 @@ admin
  npm run dev
 frontend npm start
 
+******************************************
+backend:
+
+we use express js for creating api
+json web token for user user authentication
+to manage in database use mongodb atlas
+to store image used multer (in backend using admin)
+cors the midware to give permission to access the backend
+
+npm init
+npm i express
+npm i jsonwebtoken
+npm i mongoose
+npm i multer
+npm i cors
 
 ******************************************
 
@@ -14,3 +29,4 @@ popular.jsx
 liginsighnup.jsx
 shopcontext.jsx
 
+***************************
